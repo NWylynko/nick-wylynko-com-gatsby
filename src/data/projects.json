@@ -1,0 +1,184 @@
+[
+  {
+    "id": 12,
+    "subtitle": "2020 - For Client",
+    "title": "share Your Story",
+    "info": "website - Reactjs, TypeScript, Firebase",
+    "body": "Client share Your Story needed a website to have an online presence to get customers and display work that has been done. Using modern web technologies I built two websites, the main website is used to sell the business and gain customers, the second page is a admin panel to manage firestore for the text and firebase storage for images. This means the website is entirely dynamic and can easily be updated in real time.",
+    "image": "yourStory.png",
+    "links": [
+      {
+        "name": "Link",
+        "url": "https://yourstory.family/"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "subtitle": "Year 11 - School - Computer Science first project",
+    "title": "Connect 420",
+    "info": "Web app / PWA - Reactjs, TypeScript, Socketio, Redis, Docker",
+    "body": "School Project was to create a simple game, I choose to create a clone of Connect 4, Connect 420 an online multiplayer retro themed version of the game. I taught myself how to use Redis to store the state of the boards and create a game server that can easily be scaled to handle thousands of players simultaneously. I touched up on my docker skills to containerize the server to quickly and easily deploy the server anywhere. ",
+    "image": "connect420.png",
+    "links": [
+      {
+        "name": "Link",
+        "url": "https://connect420.web.app/"
+      },
+      {
+        "name": "Github - Client",
+        "url": "https://github.com/NWylynko/connect420/"
+      },
+      {
+        "name": "Github - Server",
+        "url": "https://github.com/NWylynko/connect420-server/"
+      }
+    ],
+    "stat": "connect420"
+  },
+  {
+    "id": 10,
+    "subtitle": "2020 - Myself",
+    "title": "Conduit - realworld",
+    "info": "IPhone, Android - React Native, CRUD - REST api",
+    "body": "Ported Conduit [https://github.com/gothinkster/realworld] over to React Native in 4 days, while sticking to the spec.",
+    "image": "realworld.png",
+    "links": [
+      {
+        "name": "Github",
+        "url": "https://github.com/NWylynko/realworld-react-native/"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "subtitle": "2020 - Myself",
+    "title": "Fountains",
+    "info": "IPhone, Android - Expo (React Native), firebase",
+    "body": "Public map of water fountains around the world. ",
+    "image": "fountains.png",
+    "links": [
+      {
+        "name": "Link (need expo)",
+        "url": "exp://exp.host/@nwylynko/fountains"
+      }
+    ],
+    "stat": "fountains"
+  },
+  {
+    "id": 2,
+    "subtitle": "2019 - Myself",
+    "title": "MiniNotes",
+    "info": "Website - React, firebase",
+    "body": "Public pin board for posting notes forever. ",
+    "image": "mininotes.png",
+    "links": [
+      {
+        "name": "Github",
+        "url": "https://github.com/nwylynko/MiniNotes"
+      },
+      {
+        "name": "Link",
+        "url": "https://mininotes-420.web.app"
+      }
+    ],
+    "stat": "miniNotes"
+  },
+  {
+    "id": 3,
+    "subtitle": "2019 - Myself",
+    "title": "Small Talk",
+    "info": "Website, IPhone, Android - Expo (React Native), firebase",
+    "body": "Instant Messaging app that works accross all platforms. ",
+    "image": "small-talk.png",
+    "links": [
+      {
+        "name": "Github",
+        "url": "https://github.com/nwylynko/Small-Talk"
+      },
+      {
+        "name": "Link",
+        "url": "https://small-talk-666.web.app"
+      }
+    ],
+    "stat": "smallTalk"
+  },
+  {
+    "id": 4,
+    "subtitle": "Year 10 - Extracurricular - School Robotics",
+    "title": "Robotics",
+    "info": "Coding - javascript, python",
+    "body": "Developing/Coding tools to control robots in school robots’ competitions.",
+    "image": "RoboHUD.jpg",
+    "links": [
+      {
+        "name": "Github",
+        "url": "https://github.com/CCGSRobotics/RoboHUD"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "subtitle": "Year 10 - School - Advanced Software Development",
+    "title": "WeBanter",
+    "info": "Windows - C# client, Nodejs",
+    "body": "Group project to create a program for sharing messages and images in group chats.",
+    "image": "major-project-geet.PNG",
+    "links": [
+      {
+        "name": "Github",
+        "url": "https://github.com/ccgs-10asd-2019/major-project-geet"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "subtitle": "2019 - Myself",
+    "title": "MCControl",
+    "info": "Website - html, Javascript, Nodejs, Websocket",
+    "body": "Developed from scratch over 30 hours, runs and controls a Minecraft server remotely.",
+    "image": "mccontrol.png",
+    "links": [
+      {
+        "name": "Github",
+        "url": "https://github.com/NWylynko/MCControl"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "subtitle": "2019 - Myself",
+    "title": "Cookies",
+    "info": "iPhone, Android Game - React Native/Expo",
+    "body": "Taught myself how to create React Native apps for phones with basic JavaScript knowledge and put this game together over 2 weeks.",
+    "image": "cookies.png",
+    "links": [
+      {
+        "name": "Github",
+        "url": "https://github.com/NWylynko/Cookies"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "subtitle": "2019 - Myself",
+    "title": "Random Scripts",
+    "info": "Shell / Bash scripts",
+    "body": "While overseas I created scripts to quickly install and setup programs on remote servers.",
+    "image": "random-scripts.png",
+    "links": [
+      {
+        "name": "Github",
+        "url": "https://github.com/NWylynko/Random-Scripts"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "subtitle": "2018 - Myself",
+    "title": "Computers",
+    "info": "hardware",
+    "body": "Got old computer, installed FreeNas on, repurposed as a NAS.\n      Bought parts for a gaming computer, fun to build and play on.\n      Built a computer and Hackintoshed it so it would run MacOS, \n      saved money and got the storage and power needed. Challenging but fun to work on.\n      Opened my MacBook and installed more ram and replaced HDD for SSD.",
+    "image": "computers.jpg"
+  }
+]

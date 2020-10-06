@@ -1,0 +1,35 @@
+[
+  {
+    "id": 3,
+    "name": "Interactive Design - Mobile User Experience",
+    "date": "2020",
+    "body": "This course further extended my knowledge in creating mobile apps that have an emphasis on the end user having a great experience using it.",
+    "image": "interactive-design-MobileUX.jpg",
+    "links": [
+      {
+        "name": "Link",
+        "url": "https://www.interaction-design.org/nick-wylynko/certificate/course/b7c26498-3d37-4faf-8130-6825dc0ac204"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Interactive Design - Human Computer Interaction",
+    "date": "2020",
+    "body": "This 9 week course taught me how to design software \n      around peoples needs to ensure the end user is \n      engaged and has an enjoyable experience.",
+    "image": "interactive-design-HCI.jpg",
+    "links": [
+      {
+        "name": "Link",
+        "url": "https://www.interaction-design.org/nick-wylynko/certificate/course/90deb6fb-43e4-4621-b751-1668853c1944"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "SAE Design",
+    "date": "2020",
+    "body": "Fun three day course on the holidays, I learnt some new tips \n      and tricks with Illustrator and Photoshop.",
+    "image": "SAE-design.png"
+  }
+]
