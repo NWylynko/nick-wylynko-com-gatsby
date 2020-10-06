@@ -10,7 +10,7 @@ import { List, Item } from "../components/list"
 import { List as HList, Item as HItem } from "../components/horizontalList"
 import { Link } from "../components/styledLinks"
 
-import Badge from "react-simple-Badges"
+// import Badge from "react-simple-Badges"
 import { Certificates } from "../components/certificates"
 import { Projects } from "../components/projects"
 
@@ -73,37 +73,37 @@ const IndexPage = () => (
         <h2>Skills</h2>
 
         <h3>Languages</h3>
-        <StyledBadge name="JavaScript" />
+        {/* <StyledBadge name="JavaScript" />
         <StyledBadge name="TypeScript" />
         <StyledBadge name="HTML5" />
         <StyledBadge name="CSS3" />
-        <StyledBadge name="Python" />
+        <StyledBadge name="Python" /> */}
         <h3>Libraries</h3>
-        <StyledBadge name="React" />
+        {/* <StyledBadge name="React" />
         <StyledBadge name="React Router" />
         <StyledBadge name="Expo" />
         <StyledBadge name="Socket.io" />
         <StyledBadge name="Material-UI" />
-        <StyledBadge name="styled-components" />
+        <StyledBadge name="styled-components" /> */}
         <h3>Tools</h3>
-        <StyledBadge name="GitHub" />
+        {/* <StyledBadge name="GitHub" />
         <StyledBadge name="Visual Studio Code" />
         <StyledBadge name="Blender" />
         <StyledBadge name="Adobe Photoshop" />
-        <StyledBadge name="Adobe Illustrator" />
+        <StyledBadge name="Adobe Illustrator" /> */}
         <h3>Other</h3>
-        <StyledBadge name="Node.js" />
+        {/* <StyledBadge name="Node.js" />
         <StyledBadge name="NPM" />
         <StyledBadge name="Docker" />
         <StyledBadge name="Firebase" />
         <StyledBadge name="Google Cloud" />
         <StyledBadge name="Redis" />
-        <StyledBadge name="NGINX" />
+        <StyledBadge name="NGINX" /> */}
         <h3>Office</h3>
-        <StyledBadge name="Microsoft Word" />
+        {/* <StyledBadge name="Microsoft Word" />
         <StyledBadge name="Microsoft PowerPoint" />
         <StyledBadge name="Microsoft Excel" />
-        <StyledBadge name="Microsoft OneNote" />
+        <StyledBadge name="Microsoft OneNote" /> */}
         <h2>Certificates</h2>
         <Certificates />
       </Section>
@@ -117,13 +117,13 @@ const IndexPage = () => (
 
 export default IndexPage
 
-const StyledBadge = styled(Badge)`
-  height: 30px;
-  width: auto;
-  display: inline-block;
-  padding: 1px;
-  margin: 1px;
-`
+// const StyledBadge = styled(Badge)`
+//   height: 30px;
+//   width: auto;
+//   display: inline-block;
+//   padding: 1px;
+//   margin: 1px;
+// `
 
 const Layout = styled.main`
   display: inline-flex;
