@@ -118,14 +118,12 @@ const IndexPage = () => (
 export default IndexPage
 
 const StyledBadge = styled(Badge)`
-
   height: 30px;
   width: auto;
   display: inline-block;
   padding: 1px;
   margin: 1px;
-
-`;
+`
 
 const Layout = styled.main`
   display: inline-flex;

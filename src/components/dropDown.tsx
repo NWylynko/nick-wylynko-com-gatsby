@@ -2,19 +2,22 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { Link } from "./styledLinks"
 
-export const DropDown = ({ children, hidden }: { children: JSX.Element | JSX.Element[] | string, hidden: JSX.Element }) => {
-
-  const [clicked, setClicked] = useState<boolean>(false);
+export const DropDown = ({
+  children,
+  hidden,
+}: {
+  children: JSX.Element | JSX.Element[] | string
+  hidden: JSX.Element
+}) => {
+  const [clicked, setClicked] = useState<boolean>(false)
 
   return (
-    <div 
-      onClick={() => setClicked(state => !state)} 
-      style={{ display: 'content' }}
-      >
+    <div
+      onClick={() => setClicked(state => !state)}
+      style={{ display: "content" }}
+    >
       {children}
-      <Container clicked={clicked}>
-        {hidden}
-      </Container>
+      <Container clicked={clicked}>{hidden}</Container>
     </div>
   )
 }

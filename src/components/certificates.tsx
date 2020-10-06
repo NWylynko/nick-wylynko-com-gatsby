@@ -49,9 +49,7 @@ const Certificate = (props: CertificateProps) => {
     <Article key={id}>
       <p style={{ fontSize: "0.9em" }}>{date}</p>
       <DropDown hidden={<Image imgName={image} />}>
-        <Link
-          style={{ fontSize: "1.3em" }}
-        >{`${name}`}</Link>
+        <Link style={{ fontSize: "1.3em" }}>{`${name}`}</Link>
       </DropDown>
       <p>{body}</p>
       {links && <LinksList links={links} />}

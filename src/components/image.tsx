@@ -7,14 +7,23 @@ interface Data {
     edges: {
       node: {
         fluid:
-          | (FluidObject & { originalName: string, presentationHeight: number })
-          | (FluidObject[] & { originalName: string, presentationHeight: number })
+          | (FluidObject & { originalName: string; presentationHeight: number })
+          | (FluidObject[] & {
+              originalName: string
+              presentationHeight: number
+            })
       }
     }[]
   }
 }
 
-const Image = ({ imgName, className = '' }: { imgName: string, className?: string }) => (
+const Image = ({
+  imgName,
+  className = "",
+}: {
+  imgName: string
+  className?: string
+}) => (
   <StaticQuery
     query={graphql`
       query {
