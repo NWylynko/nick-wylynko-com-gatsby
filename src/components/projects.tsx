@@ -5,53 +5,86 @@ import { LinksList, LinkProps } from "./linksList"
 import { DropDown } from "./dropDown"
 import Image from "./image"
 import { Link } from "./styledLinks"
+import Img, { FluidObject } from "gatsby-image"
+
+interface DirtyData {
+  allContentfulProjects: {
+    edges: {
+      node: {
+        id: string;
+        body: {
+          body: string;
+        };
+        info: string;
+        subtitle: string;
+        title: string;
+        links: LinkProps[];
+        image: {
+          fluid: FluidObject | FluidObject[];
+        };
+      }
+    }[]
+  }
+}
+
+interface Data {
+  id: string;
+  body: string;
+  info: string;
+  subtitle: string;
+  title: string;
+  links: LinkProps[];
+  image: FluidObject | FluidObject[];
+}
 
 export const Projects = () => {
-  const data = useStaticQuery(graphql`
+  const dirtyData: DirtyData = useStaticQuery(graphql`
     query MyProjects {
-      allProjectsJson {
+      allContentfulProjects(sort: {fields: order, order: DESC}) {
         edges {
           node {
             id
-            body
-            image
-            links {
-              name
-              url
+            body {
+              body
             }
             info
             subtitle
             title
-            stat
+            links {
+              name
+              url
+            }
+            image { fluid(maxWidth: 400) {
+              ...GatsbyContentfulFluid
+              }
+            }
           }
         }
       }
     }
   `)
 
-  return <>{data.allProjectsJson.edges.map(Project)}</>
+  const data: Data[] = dirtyData.allContentfulProjects.edges.map(edge => {
+    const { id, body, info, subtitle, title, links, image } = edge.node
+    return {
+      id,
+      body: body.body,
+      info,
+      subtitle,
+      title,
+      links,
+      image: image.fluid
+    }
+  })
+
+  return <>{data.map(Project)}</>
 }
 
-interface ProjectProps {
-  node: {
-    id: string
-    body: string
-    image: string
-    links?: LinkProps[]
-    info: string
-    subtitle: string
-    title: string
-    stat?: string
-  }
-}
-
-const Project = (props: ProjectProps) => {
-  const { id, body, image, links, info, subtitle, title, stat } = props.node
-
+const Project = ({ id, body, image, links, info, subtitle, title }: Data) => {
   return (
     <Article key={id}>
       <p style={{ fontSize: "0.9em" }}>{subtitle}</p>
-      <DropDown hidden={<Image imgName={image} />}>
+      <DropDown hidden={<Img fluid={image} />}>
         <div>
           <Link style={{ fontSize: "1.3em", display: "inline-block" }} light>
             {title.toUpperCase()}

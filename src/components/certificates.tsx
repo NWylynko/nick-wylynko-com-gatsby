@@ -3,52 +3,85 @@ import styled from "styled-components"
 import { useStaticQuery } from "gatsby"
 import { graphql } from "gatsby"
 import { LinksList, LinkProps } from "./linksList"
-import Image from "./image"
+// import Image from "./image"
 import { Link } from "./styledLinks"
 import { DropDown } from "./dropDown"
+import Img, { FluidObject } from "gatsby-image"
+
+interface DirtyData {
+  allContentfulCertificates: {
+    edges: {
+      node: {
+        id: string;
+        name: string;
+        body: {
+          body: string;
+        };
+        date: string;
+        links: LinkProps[];
+        image: {
+          fluid: FluidObject | FluidObject[];
+        };
+      }
+    }[]
+  }
+}
+
+interface Data {
+  id: string;
+  name: string;
+  body: string;
+  date: string;
+  links: LinkProps[];
+  image: FluidObject | FluidObject[];
+}
 
 export const Certificates = () => {
-  const data = useStaticQuery(graphql`
+  const dirtyData: DirtyData = useStaticQuery(graphql`
     query MyCertificates {
-      allCertificatesJson {
+      allContentfulCertificates {
         edges {
           node {
             id
-            body
-            date
-            image
+            name
+            body {
+              body
+            }
+            date(formatString: "YYYY")
             links {
               name
               url
             }
-            name
+            image { fluid(maxWidth: 400) {
+              ...GatsbyContentfulFluid
+              }
+            }
           }
         }
       }
     }
   `)
 
-  return <>{data.allCertificatesJson.edges.map(Certificate)}</>
+  const data: Data[] = dirtyData.allContentfulCertificates.edges.map(edge => {
+    const { id, name, date, links, image, body } = edge.node
+    return {
+      id,
+      name,
+      date,
+      body: body.body,
+      links,
+      image: image.fluid
+    }
+  })
+
+  return <>{data.map(Certificate)}</>
 }
 
-interface CertificateProps {
-  node: {
-    name: string
-    id: string
-    body: string
-    date: string
-    image: string
-    links: LinkProps[]
-  }
-}
-
-const Certificate = (props: CertificateProps) => {
-  const { name, id, body, date, image, links } = props.node
-
+const Certificate = ({ name, id, body, date, image, links }: Data) => {
   return (
     <Article key={id}>
       <p style={{ fontSize: "0.9em" }}>{date}</p>
-      <DropDown hidden={<Image imgName={image} />}>
+      <DropDown hidden={<Img fluid={image} />}>
         <Link style={{ fontSize: "1.3em" }}>{`${name}`}</Link>
       </DropDown>
       <p>{body}</p>
